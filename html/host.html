@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/host.css" rel="stylesheet"/>
+  <title>HOST</title>
+</head>
+<body>
+  <div id="container">
+    <!-- 값 표시 -->
+    <h1 id="text">현재 호출번호 : 1</h1>
+    <!-- 입력 하는 인풋 -->
+    <input id="input" type="number" min="1" value="1"/> 
+    <!-- 버튼들 -->
+    <button id="btn1" onclick="numberSet()">1번 호출하기 (현재 입력 번호)</button>
+    <button id="btn2" onclick="numberUp()">1번 호출하기 (다음 번호)</button>
+  </div>
+  <!-- js 연결 -->
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="/js/host.js"></script>
+</body>
+</html>
