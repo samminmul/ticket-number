@@ -1,4 +1,4 @@
-const socketClient = io("ws://://thinkode.kr:3000");
+const socketClient = io("ws://thinkode.kr:3000");
 var audio = new Audio();
 audio.src = '../sound/Ding1s.mp3'
 // audio.volume = 0.5;
