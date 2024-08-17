@@ -9,11 +9,22 @@ html,body{
 }
 
 #number {
-  font-size: 2rem;
+  font-size: 25rem;
   font-weight: 700;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
+
+#text {
+    font-size: 3rem;
+    font-weight: 700;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }

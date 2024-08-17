@@ -1,5 +1,5 @@
 const h1 = document.getElementById('text')
-const socketClient = io("ws://thinkode.kr:3000");
+const socketClient = io("ws://localhost:3000");
 const input = document.getElementById("input");
 
 let number = 0;
