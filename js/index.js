@@ -9,16 +9,13 @@ function ReadOneNumber(number0to9, suffix){
     if (number0to9 === 0) {
         return "";
     }
-
     if (suffix === "") {
         return read[number0to9];
-    } else {
-        if (number0to9 === 1) {
-            return suffix;
-        } else {
-            return read[number0to9] + suffix;
-        }
     }
+    if (number0to9 === 1) {
+        return suffix;
+    }
+    return read[number0to9] + suffix;
 }
 
 function ReadNumber(number){ //숫자가 천의 자리를 넘는다면 지구멸망함
