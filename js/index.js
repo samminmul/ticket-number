@@ -25,9 +25,9 @@ function ReadNumber(number){ //숫자가 천의 자리를 넘는다면 지구멸
   let one = number % 10;
 
   let read = ReadOneNumber(thousand, "천") + 
-            ReadOneNumber(hundred, "백") + 
-            ReadOneNumber(ten, "십") + 
-            ReadOneNumber(one, "")
+             ReadOneNumber(hundred, "백") + 
+             ReadOneNumber(ten, "십") + 
+             ReadOneNumber(one, "")
   
   return read;
 }
