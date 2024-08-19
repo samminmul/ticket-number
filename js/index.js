@@ -4,6 +4,35 @@ audio.src = "../sound/Ding1s.mp3";
 // audio.volume = 0.5;
 //audio.duration = 0.6;
 
+function ReadOneNumber(number0to9, suffix){
+    const read = "영일이삼사오육칠팔구";
+    if (number0to9 === 0) {
+        return "";
+    }
+
+    if (suffix === "") {
+        return read[number0to9];
+    } else {
+        if (number0to9 === 1) {
+            return suffix;
+        } else {
+            return read[number0to9] + suffix;
+        }
+    }
+}
+
+function ReadNumber(number){ //숫자가 천의 자리를 넘는다면 지구멸망함
+    let hundred = parseInt(number / 100);
+    let ten = parseInt(number / 10) % 10;
+    let one = number % 10;
+
+    let read = ReadOneNumber(hundred, "백") + 
+               ReadOneNumber(ten, "십") + 
+               ReadOneNumber(one, "")
+    
+    return read;
+}
+
 socketClient.on("호출", (number) => {
   console.log(number);
   document.getElementById("number").innerHTML = `${number}번`;
@@ -17,7 +46,7 @@ socketClient.on("호출", (number) => {
     }
     const lang = "ko-KR";
     const utterThis = new SpeechSynthesisUtterance(
-      `${number} 번 대기자, 2층 본교무실로 오세요`
+      `${ReadNumber(number)} 번 대기자, 2층 본교무실로 오세요`
     );
     const rate = 0.8;
     utterThis.lang = lang;
