@@ -21,7 +21,7 @@ function ReadOneNumber(number0to9, suffix){
 function ReadNumber(number){ //숫자가 천의 자리를 넘는다면 지구멸망함
   let thousand = parseInt(number / 1000);
   let hundred = parseInt(number / 100) % 10;
-  let ten = parseInt(number / 10) % 100;
+  let ten = parseInt(number / 10) % 10;
   let one = number % 10;
 
   let read = ReadOneNumber(thousand, "천") + 
